@@ -47,6 +47,7 @@ Procedure Start()
     BindEvent(#PB_Event_CloseWindow, @Exit())
   Else
     MessageRequester("Error", "Communication problem with the driver")
+    Exit()
   EndIf
   
   Repeat : WaitWindowEvent() : ForEver
@@ -69,6 +70,3 @@ EndProcedure
 Procedure Exit()  
   End
 EndProcedure
-; IDE Options = PureBasic 5.61 (Windows - x86)
-; Folding = --
-; EnableXP
